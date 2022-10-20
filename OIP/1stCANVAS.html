@@ -1,0 +1,40 @@
+<html>
+
+<head>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="800" hight="800"></canvas>
+        <script>
+            const x = 93
+            const y = 83
+            const r = 36.5
+            const R = 2 * r
+            const h = 3 * r
+            const side = h / Math.sqrt(3)
+            var a = document.getElementById("myCanvas")
+            var atx = a.getContext("2d")
+            
+            //Circumscribed circle
+            atx.bgeinPath()
+            atx.arc(x, y, R, 0, 2 * Math.PI)
+            atx.strokeStyle = "red"
+            atx.stroke()
+            
+            //Triangle
+            atx.beginPath()
+            atx.noveTo(x, y - 2*r)
+            atx.lineTo (x + side, y + r)
+            atx.lineTo (x - side, y + r)
+            atx.closePath()
+            atx.strokeStyle = "black"
+            atx.stroke()
+            
+            //inscribed circle
+            atx.beginPath()
+            atx.arc(x, y, r, 0, 2 * Math.PI)
+            atx.strokeStyle = "blue"
+            atx.stroke()
+        </script>
+</body>
+</html>
