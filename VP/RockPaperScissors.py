@@ -1,7 +1,4 @@
-from msvcrt import kbhit
 import os
-
-
 import os
 player1 = str(input("Player 1 - Choose between Rock, Paper and Scissors (type r/p/s): "))
 os.system("cls")
